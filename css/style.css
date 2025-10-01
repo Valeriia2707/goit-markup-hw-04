@@ -115,7 +115,7 @@ header .container {
 .nav-link.active::after {
   content: '';
   position: absolute;
-  bottom: -2px;
+  bottom: -1px;
   left: 0;
   background-color: #404bbf;
   width: 48px;
@@ -156,7 +156,12 @@ header .container {
   background-color: #2e2f42;
   height: 600px;
   padding: 188px 0;
-  background-image: url(../images/hero-image.jpg);
+  max-width: 1440px;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero-image.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -308,7 +313,7 @@ header .container {
   height: 40px;
 }
 .third-section-icon {
-  fill: #ffffff;
+  fill: #f4f4fd;
 }
 .third-paragraph {
   font-weight: 400;
