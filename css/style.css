@@ -43,7 +43,6 @@ body {
 }
 
 .header {
-  background-color: #e7e9fc;
   border-bottom: 1px solid #e7e9fc;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
@@ -56,6 +55,7 @@ body {
 header .container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .nav {
   display: flex;
@@ -65,9 +65,6 @@ header .container {
 .nav .nav-ul {
   display: flex;
   gap: 40px;
-  margin-right: 332px;
-  width: 261px;
-  padding: 24px 0;
 }
 .address ul {
   display: flex;
@@ -90,6 +87,8 @@ header .container {
   line-height: 1.17;
   color: #4d5ae5;
   text-decoration: none;
+}
+.logo-header {
   margin-right: 76px;
 }
 
@@ -106,6 +105,7 @@ header .container {
   text-decoration: none;
   color: #2e2f42;
   padding: 24px 0;
+  display: block;
   position: relative;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -115,7 +115,7 @@ header .container {
 .nav-link.active::after {
   content: '';
   position: absolute;
-  bottom: -1px;
+  bottom: -2px;
   left: 0;
   background-color: #404bbf;
   width: 48px;
@@ -156,16 +156,12 @@ header .container {
   background-color: #2e2f42;
   height: 600px;
   padding: 188px 0;
-  background-image: linear-gradient(
-      to bottom,
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
-    url(../images/hero-image.jpg);
-  max-width: 1440px;
+  background-image: url(../images/hero-image.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  background-color: rgba(46, 47, 66, 0.7);
 }
 
 .heading {
@@ -263,7 +259,6 @@ header .container {
 
 .third-section {
   background-color: #f4f4fd;
-  height: 732px;
   padding: 120px 0;
 }
 .third-section__container .third-ul {
@@ -291,7 +286,7 @@ header .container {
 
 .third-list {
   border-radius: 0 0 4px 4px;
-  width: 264px;
+  width: calc((100% - 72px) / 4);
   height: 428px;
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
@@ -313,11 +308,8 @@ header .container {
   height: 40px;
 }
 .third-section-icon {
-  display: block;
-  margin-top: 8px;
-  fill: #f4f4fd;
+  fill: #ffffff;
 }
-
 .third-paragraph {
   font-weight: 400;
   font-style: regular;
@@ -326,6 +318,8 @@ header .container {
   letter-spacing: 0.02em;
   color: #434455;
   text-align: center;
+  margin-bottom: 8px;
+  display: block;
 }
 .third-icon-a {
   width: 100%;
@@ -417,7 +411,7 @@ header .container {
   margin: 0 auto;
   width: 100%;
 }
-.wrapper:hover .overlay-text {
+.fourth-li:hover .overlay-text {
   transform: translateY(0);
 }
 .overlay-text {
@@ -437,11 +431,10 @@ header .container {
 }
 .footer {
   background-color: #2e2f42;
-  height: 312px;
-  padding: 100px 156px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 .footer-container {
-  margin: 0;
   display: flex;
   align-items: baseline;
 }
@@ -459,11 +452,13 @@ header .container {
 .footer .logo-first {
   color: #f4f4fd;
 }
-.footer a {
-  margin-bottom: 16px;
-}
+
 .div-logo-footer {
   margin-right: 120px;
+}
+.div-logo-footer .logo {
+  margin-bottom: 17.5px;
+  display: block;
 }
 .socialmedia-icon {
   display: flex;
